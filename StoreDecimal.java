@@ -3,44 +3,50 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package firstturninjava;
 
 /**
- *
- * @author Marc
+ * This program implements the StoreDecimal class which does the conversion
+ * from decimal to binary.
+ * @version 1.0
+ * @author Marc Bambey
+ * @since 14.11.2017
  */
+
+
 public class StoreDecimal  {
     private int number;
-public StoreDecimal(int number){
-    this.number=number;
-
-}
-public String getBinary(){
-    String  tmp="";
-for (int x = 7; x >= 0; x--) {
-    tmp += ((1 << x) & number) != 0 ? "1" : "0";
-}
-return  tmp;
-}
-
-public int getDecimal(){
-    return number;
-}
-
-public static void main(String[] args){
-    StoreDecimal decimal=new StoreDecimal((int)0);
     
-    StoreDecimal decimal2=new StoreDecimal((int)1);
-    StoreDecimal decimal3=new StoreDecimal((int)16);
-    StoreDecimal decimal1=new StoreDecimal((int)-70);
-    StoreDecimal decimal4=new StoreDecimal((int)70);
-    StoreDecimal decimal5=new StoreDecimal((int)'A');
-    System.out.println(decimal.getBinary());
+    /**
+ * This is the constructor 
+ * @param number is the decimal number you get when calling this function
+ * This constructor just saves the number you entered in the private variable
+ * number of the StoreDecimal class
+ * @author Marc
+ */
+    public StoreDecimal(int number){
+        this.number=number;
+
+    }
+    /**
+     * This function calculates the Binary value of the number entered.
+     * @return this returns the Binary String calculated
+     */
     
-    System.out.println(decimal2.getBinary());
-    System.out.println(decimal3.getBinary());
-    System.out.println(decimal1.getBinary());
-    System.out.println(decimal4.getBinary());
-    System.out.println(decimal5.getBinary());
-}
+    public String getBinary(){
+        String  tmp="";
+        for (int x = 7; x >= 0; x--) {
+            tmp += ((1 << x) & number) != 0 ? "1" : "0";
+        }
+        return  tmp;
+    }
+    /**
+     * This returns the decimal number entered by the user
+     * @return This just returns the decimal number
+     */
+    
+    public int getDecimal(){
+        return number;
+    }
 }
