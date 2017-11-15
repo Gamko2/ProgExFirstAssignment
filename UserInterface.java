@@ -21,9 +21,7 @@ public class UserInterface {
      */
     public String getInput() {
         System.out.println("Please type in a number: ");
-        Scanner x = new Scanner(System.in);
-        String input = x.next();
-        return input;
+        return new Scanner(System.in).next();
     }
 
     /**
@@ -33,10 +31,7 @@ public class UserInterface {
      * @return Either returns true if the input is q or Q or false if it isn't
      */
     public boolean checkForTermination(String input) {
-        if (input.contentEquals("Q") || input.contentEquals("q")) {
-            return true;
-        }
-        return false;
+        return (input.contentEquals("Q") || input.contentEquals("q"));
     }
 
     /**
@@ -48,8 +43,7 @@ public class UserInterface {
      */
     public boolean convertToInt(String input) {
         try {
-            int number = Integer.parseInt(input);
-            this.number = number;
+            this.number = Integer.parseInt(input);
             return true;
         } catch (NumberFormatException numberFormatException) {
             System.out.println("Wrong Input");
@@ -83,7 +77,6 @@ public class UserInterface {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
         UserInterface userInterface = new UserInterface();
         while (true) {
             String input = userInterface.getInput();
