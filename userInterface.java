@@ -31,8 +31,8 @@ public class UserInterface {
         boolean running=true;
         while (running){
             System.out.println("Please type in a number: "); 
-            Scanner x =new Scanner(System.in);
-            String input=x.next();
+            Scanner x = new Scanner(System.in);
+            String input = x.next();
             if (input.contentEquals("Q")||input.contentEquals("q")){
                 break;
             }
@@ -43,8 +43,8 @@ public class UserInterface {
 				continue;
         
             }
-            if (-128 <=number&& number <=127)    {
-                StoreDecimal decimal=new StoreDecimal(number);
+            if (-128 <= number && number <= 127)    {
+                StoreDecimal decimal = new StoreDecimal(number);
                 System.out.println(decimal.getBinary()+" " 
                         + decimal.getDecimal());          
             }else {

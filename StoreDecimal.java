@@ -26,7 +26,7 @@ public class StoreDecimal  {
  * @author Marc
  */
     public StoreDecimal(int number){
-        this.number=number;
+        this.number = number;
 
     }
     /**
@@ -35,7 +35,7 @@ public class StoreDecimal  {
      */
     
     public String getBinary(){
-        String  tmp="";
+        String  tmp = "";
         for (int x = 7; x >= 0; x--) {
             tmp += ((1 << x) & number) != 0 ? "1" : "0";
         }
