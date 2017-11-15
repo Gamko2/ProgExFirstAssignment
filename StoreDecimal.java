@@ -10,8 +10,8 @@ package firstturninjava;
  * @author Marc
  */
 public class StoreDecimal  {
-    private char number;
-public StoreDecimal(char number){
+    private int number;
+public StoreDecimal(int number){
     this.number=number;
 
 }
@@ -28,13 +28,13 @@ public int getDecimal(){
 }
 
 public static void main(String[] args){
-    StoreDecimal decimal=new StoreDecimal((char)0);
+    StoreDecimal decimal=new StoreDecimal((int)0);
     
-    StoreDecimal decimal2=new StoreDecimal((char)1);
-    StoreDecimal decimal3=new StoreDecimal((char)16);
-    StoreDecimal decimal1=new StoreDecimal((char)-70);
-    StoreDecimal decimal4=new StoreDecimal((char)200);
-    StoreDecimal decimal5=new StoreDecimal((char)'A');
+    StoreDecimal decimal2=new StoreDecimal((int)1);
+    StoreDecimal decimal3=new StoreDecimal((int)16);
+    StoreDecimal decimal1=new StoreDecimal((int)-70);
+    StoreDecimal decimal4=new StoreDecimal((int)70);
+    StoreDecimal decimal5=new StoreDecimal((int)'A');
     System.out.println(decimal.getBinary());
     
     System.out.println(decimal2.getBinary());
