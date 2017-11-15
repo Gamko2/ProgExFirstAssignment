@@ -28,8 +28,7 @@ public class UserInterface {
      */
     public static void main(String[] args) {
         int number;
-        boolean running=true;
-        while (running){
+        while (true){
             System.out.println("Please type in a number: "); 
             Scanner x = new Scanner(System.in);
             String input = x.next();
